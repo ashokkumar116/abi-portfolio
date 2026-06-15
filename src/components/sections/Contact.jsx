@@ -21,8 +21,8 @@ const contactInfo = [
       </svg>
     ),
     label: 'Email',
-    value: 'abishek@example.com',
-    href: 'mailto:abishek@example.com',
+    value: 'abishek@kubros.in',
+    href: 'mailto:abishek@kubros.in',
   },
   {
     icon: (
@@ -31,8 +31,8 @@ const contactInfo = [
       </svg>
     ),
     label: 'Phone',
-    value: '+91 98765 43210',
-    href: 'tel:+919876543210',
+    value: '+91 63743 03502',
+    href: 'tel:+916374303502',
   },
   {
     icon: (
@@ -42,7 +42,7 @@ const contactInfo = [
       </svg>
     ),
     label: 'Location',
-    value: 'Tamil Nadu, India',
+    value: 'Ariyalur, Tamil Nadu, India',
     href: null,
   },
 ];

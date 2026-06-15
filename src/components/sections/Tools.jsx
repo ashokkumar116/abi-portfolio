@@ -39,9 +39,9 @@ export default function Tools() {
             >
               {/* Tool badge */}
               <div
-                className={`w-14 h-14 rounded-xl flex items-center justify-center text-white font-bold font-mono text-lg shadow-lg group-hover:scale-110 transition-transform duration-300 ${toolBgColors[tool.abbr] || 'bg-accent'}`}
+                className={`w-14 h-14 rounded-xl flex items-center justify-center text-white font-bold font-mono text-lg shadow-lg group-hover:scale-110 transition-transform duration-300`}
               >
-                {tool.abbr}
+                <img src={tool.icon} alt={tool.name} className="w-10 h-10 object-contain" />
               </div>
 
               {/* Tool name */}
