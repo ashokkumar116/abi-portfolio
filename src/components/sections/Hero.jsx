@@ -3,13 +3,15 @@ import { heroData } from '../../data/hero';
 import { gsap, ScrollTrigger } from '../../utils/gsapConfig';
 import Button from '../ui/Button';
 
+
+
 const iconStyles = {
   Ps: { position: 'top-[8%] -left-[5%]', bg: 'bg-[#31A8FF]' },
   Ai: { position: 'top-[18%] -right-[4%]', bg: 'bg-[#FF9A00]' },
-  Ae: { position: 'bottom-[32%] -left-[6%]', bg: 'bg-[#9999FF]' },
-  Fg: { position: 'bottom-[18%] -right-[3%]', bg: 'bg-[#F24E1E]' },
+  // Ae: { position: 'bottom-[32%] -left-[6%]', bg: 'bg-[#9999FF]' },
+  Cd: { position: 'bottom-[18%] -right-[3%]', bg: 'bg-[#61A706]' },
   Id: { position: 'top-[52%] -left-[8%]', bg: 'bg-[#FF3366]' },
-  Lr: { position: 'top-[68%] -right-[6%]', bg: 'bg-[#31A8FF]' },
+  Cn: { position: '-bottom-[10%] right-[40%]', bg: 'bg-[#31A8FF]' },
 };
 
 export default function Hero() {
@@ -45,7 +47,8 @@ export default function Hero() {
             '-=0.3'
           )
           .fromTo(ctaRef.current, { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.5 }, '-=0.2')
-          .fromTo(imageRef.current, { opacity: 0, scale: 0.95 }, { opacity: 1, scale: 1, duration: 0.8 }, '-=0.4');
+          .fromTo(imageRef.current, { opacity: 0, scale: 0.95 }, { opacity: 1, scale: 1, duration: 0.8 }, '-=0.4')
+          .fromTo(iconsRef.current, { opacity: 0 }, { opacity: 1, y: 0, duration: 0.1, stagger: 0.05 }, '-=0.2')
 
         // Floating icons GSAP loop
         iconsRef.current.forEach((icon, i) => {
@@ -122,7 +125,7 @@ export default function Hero() {
             </p>
 
             {/* Trusted By */}
-            <div ref={trustedRef} className="opacity-0">
+            {/* <div ref={trustedRef} className="opacity-0">
               <p className="text-text-muted text-xs font-mono uppercase tracking-widest mb-3">
                 Trusted by
               </p>
@@ -136,7 +139,7 @@ export default function Hero() {
                   </span>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Stats */}
             <div ref={statsRef} className="flex items-center gap-8">
@@ -202,7 +205,8 @@ export default function Hero() {
             </div>
 
             {/* Floating Tool Icons */}
-            {heroData.floatingIcons.map((icon, i) => (
+            {heroData.floatingIcons.map((icon, i) => {
+              return(
               <div
                 key={i}
                 ref={(el) => (iconsRef.current[i] = el)}
@@ -210,16 +214,16 @@ export default function Hero() {
               >
                 <div className="flex items-center gap-2 px-3 py-2 glass-card rounded-xl shadow-[0_0_15px_rgba(0,0,0,0.5)] floating-icon">
                   <div
-                    className={`w-7 h-7 rounded-md flex items-center justify-center text-white text-xs font-bold font-mono ${iconStyles[icon.name]?.bg || 'bg-accent'}`}
+                    className={`w-7 h-7 rounded-md flex items-center justify-center text-white text-xl font-bold font-mono`}
                   >
-                    {icon.name}
+                    <img className="w-full h-full" src={icon.icon} alt="" />
                   </div>
                   <span className="text-text text-xs font-medium whitespace-nowrap">
                     {icon.fullName}
                   </span>
                 </div>
               </div>
-            ))}
+            )})}
           </div>
         </div>
 

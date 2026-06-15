@@ -1,3 +1,10 @@
+
+import PhotoShop from "../../public/Icons/PhotoShop.svg"
+import Illustrator from "../../public/Icons/Illustrator.svg"
+import CorelDraw from "../../public/Icons/CorelDraw.svg"
+import InDesign from "../../public/Icons/InDesign.svg"
+import Canva from "../../public/Icons/Canva.svg"
+
 export const heroData = {
   eyebrow: "Available for Freelance Projects",
   heading: "Crafting Brands That",
@@ -21,11 +28,11 @@ export const heroData = {
     { value: 98, suffix: "%", label: "Satisfaction" },
   ],
   floatingIcons: [
-    { name: "Ps", fullName: "Photoshop", color: "#31A8FF", top: "8%", left: "-5%" },
-    { name: "Ai", fullName: "Illustrator", color: "#FF9A00", top: "18%", right: "-4%" },
-    { name: "Ae", fullName: "After Effects", color: "#9999FF", bottom: "32%", left: "-6%" },
-    { name: "Fg", fullName: "Figma", color: "#F24E1E", bottom: "18%", right: "-3%" },
-    { name: "Id", fullName: "InDesign", color: "#FF3366", top: "52%", left: "-8%" },
-    { name: "Lr", fullName: "Lightroom", color: "#31A8FF", top: "68%", right: "-6%" },
+    { name: "Ps", fullName: "Photoshop", color: "#31A8FF", top: "8%", left: "-5%", icon:PhotoShop },
+    { name: "Ai", fullName: "Illustrator", color: "#FF9A00", top: "18%", right: "-4%",icon:Illustrator  },
+    // { name: "Ae", fullName: "After Effects", color: "#9999FF", bottom: "32%", left: "-6%",icon:DiIllustrator  },  
+    { name: "Cd", fullName: "Corel Draw", color: "#61A706", bottom: "18%", right: "-3%",icon:CorelDraw  },
+    { name: "Id", fullName: "InDesign", color: "#FF3366", top: "52%", left: "-8%",icon:InDesign  },
+    { name: "Cn", fullName: "Canva", color: "#31A8FF", bottom: "18%", right: "-6%",icon:Canva  },
   ],
 };
